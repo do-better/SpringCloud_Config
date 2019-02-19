@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: mysql
-    url: jdbc:mysql://127.0.0.1:3306/spirngcloud?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=utf-8&useSSL=false
   redis:
     host: 127.0.0.1
     port: 6379
