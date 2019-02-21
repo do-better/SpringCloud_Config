@@ -13,11 +13,15 @@ spring:
     password: guest
     listener:
       simple:
+      #设置rabbitmq出错后重试的次数
         retry:
           max-attempts: 10
+          #是否开启重试
           enabled: true
+          #重试间隔
           initial-interval: 500ms
         simple:
+          #重试后是否丢弃
           default-requeue-rejected: true
   redis:
     host: 47.101.194.131
