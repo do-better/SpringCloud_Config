@@ -11,6 +11,14 @@ spring:
     port: 5672
     username: guest
     password: guest
+    listener:
+      simple:
+        retry:
+          max-attempts: 10
+          enabled: true
+          initial-interval: 500ms
+        simple:
+          default-requeue-rejected: true
   redis:
     host: 47.101.194.131
     port: 6379
