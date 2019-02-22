@@ -15,12 +15,12 @@ spring:
     listener:
       simple:
       #设置rabbitmq出错后重试的次数
-        retry:
-          max-attempts: 1
+        #retry:
+          #max-attempts: 1
           #是否开启重试
-          enabled: false
+          #enabled: false
           #重试间隔
-          initial-interval: 500ms
+          #initial-interval: 500ms
         simple:
           #重试后是否丢弃
           default-requeue-rejected: true
