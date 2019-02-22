@@ -7,6 +7,13 @@ spring:
     username: root
     password: mysql
     url: jdbc:mysql://47.101.194.131:3306/springcloud?characterEncoding=utf-8&useSSL=false
+    druid:
+      max-active: 500
+      initial-size: 200
+      max-wait: 60000
+      min-idle: 200
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000
   rabbitmq:
     host: 47.101.194.131
     port: 5672
@@ -16,16 +23,27 @@ spring:
       simple:
       #设置rabbitmq出错后重试的次数
         #retry:
-          #max-attempts: 1
+          max-attempts: 5
           #是否开启重试
-          #enabled: false
+          enabled: true
           #重试间隔
-          #initial-interval: 500ms
+          initial-interval: 1000ms
+          max-interval: 10000ms
         #重试后是否丢弃
         default-requeue-rejected: true
+        max-concurrency: 10
+        concurrency: 10
+        prefetch: 1
+        auto-startup: true
   redis:
     host: 47.101.194.131
     port: 6379
+    jedis:
+      pool:
+        max-idle: 500
+        max-wait: 500ms
+        max-active: 500
+    timeout: 5s
 feign:
   client:
     config:
