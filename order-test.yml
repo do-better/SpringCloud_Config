@@ -21,9 +21,8 @@ spring:
           #enabled: false
           #重试间隔
           #initial-interval: 500ms
-        simple:
-          #重试后是否丢弃
-          default-requeue-rejected: true
+        #重试后是否丢弃
+        default-requeue-rejected: true
   redis:
     host: 47.101.194.131
     port: 6379
