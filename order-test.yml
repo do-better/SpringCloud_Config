@@ -42,7 +42,7 @@ spring:
       pool:
         max-idle: 500
         max-wait: 500ms
-        max-active: 500
+        max-active: 1000
     timeout: 5s
 feign:
   client:
