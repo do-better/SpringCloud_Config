@@ -25,7 +25,7 @@ spring:
         retry:
           max-attempts: 5
           #是否开启重试
-          enabled: true
+          enabled: false
           #重试间隔
           initial-interval: 1000ms
           max-interval: 10000ms
