@@ -23,9 +23,9 @@ spring:
       simple:
       #设置rabbitmq出错后重试的次数
         retry:
-          max-attempts: 5
+          max-attempts: 1
           #是否开启重试
-          enabled: false
+          enabled: true
           #重试间隔
           initial-interval: 1000ms
           max-interval: 10000ms
