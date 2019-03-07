@@ -31,8 +31,8 @@ spring:
           max-interval: 10000ms
         #重试后是否丢弃
         default-requeue-rejected: true
-        #max-concurrency: 10
-        #concurrency: 10
+        max-concurrency: 50
+        concurrency: 10
         prefetch: 1
         auto-startup: true
   redis:
