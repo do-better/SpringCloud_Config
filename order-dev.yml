@@ -36,14 +36,19 @@ spring:
         prefetch: 1
         auto-startup: true
   redis:
-    host: localhost
-    port: 6379
-    jedis:
-      pool:
-        max-idle: 500
-        max-wait: 500ms
-        max-active: 1000
-    timeout: 5s
+    cluster:
+      timeout: 1000
+      nodes: 47.101.194.131:6379,47.101.194.131:6380,47.101.194.131:6381,47.101.194.131:6382,47.101.194.131:6383,47.101.194.131:6384
+      max-redirects: 3
+#  redis:
+#    host: localhost
+#    port: 6379
+#    jedis:
+#      pool:
+#        max-idle: 500
+#        max-wait: 500ms
+#        max-active: 1000
+#    timeout: 5s
 feign:
   client:
     config:
