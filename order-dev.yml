@@ -15,7 +15,10 @@ spring:
       time-between-eviction-runs-millis: 60000
       min-evictable-idle-time-millis: 30000
   rabbitmq:
-    host: localhost
+    # rabbitmq单机
+    #host: localhost
+    # rabbitmq集群
+    addresses: 47.101.194.131:5672
     port: 5672
     username: guest
     password: guest
